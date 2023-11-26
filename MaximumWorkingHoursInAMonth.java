@@ -4,7 +4,7 @@ public class MaximumWorkingHoursInAMonth {
     private static final int PART_TIME_WAGE_HOUR = 4;
     private static final int FULL_TIME_WAGE_HOUR = 8;
 
-    public static void computeWagesInAMonth(int wagesRate, int totalWorkingHours, int totalWorkingDays) {
+    public void computeWagesInAMonth(int wagesRate, int totalWorkingHours, int totalWorkingDays) {
         int totalNumberOfWorkingDays = 1;
         int totalHours = 0;
         while (totalNumberOfWorkingDays <= totalWorkingDays && totalHours <= totalWorkingHours) {
