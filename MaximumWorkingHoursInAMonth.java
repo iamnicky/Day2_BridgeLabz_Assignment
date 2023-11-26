@@ -7,7 +7,7 @@ public class MaximumWorkingHoursInAMonth {
     private static final int TOTAL_HOUR_IN_MONTH = 100;
     private static final int NUMBER_OF_WORKING_DAYS = 20;
 
-    public static void main(String[] args) {
+    public static void computeWagesInAMonth() {
         int totalNumberOfWorkingDays = 1;
         int totalHours = 0;
         while (totalNumberOfWorkingDays <= NUMBER_OF_WORKING_DAYS && totalHours <= TOTAL_HOUR_IN_MONTH) {

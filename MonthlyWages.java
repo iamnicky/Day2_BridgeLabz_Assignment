@@ -6,7 +6,7 @@ public class MonthlyWages {
     private static final int FULL_TIME_WAGE_HOUR = 8;
     private static final int CHARGE_PER_HOUR = 20;
 
-    public static void main(String[] args) {
+    public void computeMonthlyWages() {
         System.out.println("Please select an option:\n1. Full Time Employee\n2. Part time Employee");
         Scanner sc = new Scanner(System.in);
         int typeOfEmployee = sc.nextInt();
