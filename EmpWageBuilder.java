@@ -2,21 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class EmpWageBuilder {
+import interfaces.IEmpWagesBuilder;
+
+public class EmpWageBuilder implements IEmpWagesBuilder {
     private static List<CompanyEmpWage> companiesDetails = new ArrayList<>();
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the company name");
-        String compName = sc.nextLine();
-
-        //dummy code to illustrate as the list is actually empty
+    @Override
+    public void compute(String compName) {
         for (CompanyEmpWage item :
                 companiesDetails) {
             if (item.getCompanyName().equals(compName)) {
                 MaximumWorkingHoursInAMonth maximumWorkingHoursInAMonth = new MaximumWorkingHoursInAMonth();
                 maximumWorkingHoursInAMonth.computeWagesInAMonth(item.getWagePerHour(), item.getTotalWorkingHour(), item.getTotalWorkingDaysInAMonth());
-                sc.close();
                 return;
             }
         }
