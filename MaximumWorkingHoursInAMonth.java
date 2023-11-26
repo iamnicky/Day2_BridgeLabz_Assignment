@@ -3,14 +3,11 @@ import java.util.Scanner;
 public class MaximumWorkingHoursInAMonth {
     private static final int PART_TIME_WAGE_HOUR = 4;
     private static final int FULL_TIME_WAGE_HOUR = 8;
-    private static final int CHARGE_PER_HOUR = 20;
-    private static final int TOTAL_HOUR_IN_MONTH = 100;
-    private static final int NUMBER_OF_WORKING_DAYS = 20;
 
-    public static void computeWagesInAMonth() {
+    public static void computeWagesInAMonth(int wagesRate, int totalWorkingHours, int totalWorkingDays) {
         int totalNumberOfWorkingDays = 1;
         int totalHours = 0;
-        while (totalNumberOfWorkingDays <= NUMBER_OF_WORKING_DAYS && totalHours <= TOTAL_HOUR_IN_MONTH) {
+        while (totalNumberOfWorkingDays <= totalWorkingDays && totalHours <= totalWorkingHours) {
             totalNumberOfWorkingDays++;
 
             System.out.println("Please select an option:\n1. Working Full Time\n2. Working Part time");
@@ -29,6 +26,6 @@ public class MaximumWorkingHoursInAMonth {
             }
 
         }
-        System.out.println("Total Wages: ₹" + totalHours * CHARGE_PER_HOUR);
+        System.out.println("Total Wages: ₹" + totalHours * wagesRate);
     }
 }
